@@ -1,0 +1,102 @@
+destination: docs
+
+# template:
+#   params:
+#     bootswatch: flatly
+#     ganalytics: UA-182605574-1
+
+template:
+  bootstrap: 5
+  # bootswatch: flatly
+  bslib:
+    bg: "#FAFFFA"
+    fg: "#000000"
+    primary: "#20356b"
+    base_font: {google: "Roboto"}
+    heading_font: {google: "Roboto Slab"}
+    code_font: {google: "JetBrains Mono"}
+  trailing_slash_redirect: true
+  params:
+    noindex: false
+  includes:
+    after_body: >
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-182605574-1"#' ></script>
+       <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+
+         gtag('config', 'UA-182605574-1');
+       </script>
+
+# testes de includes (navbar, incluir no template)
+# includes:
+#   before_title: "<img src='https://lab.abj.org.br/posts/2020-01-12-welcome/abj.png' style='max-width: 100px'/>"
+#   before_navbar: "<img src='https://lab.abj.org.br/posts/2020-01-12-welcome/abj.png' style='max-width: 100px'/>"
+#   after_navbar: "<img src='https://lab.abj.org.br/posts/2020-01-12-welcome/abj.png' style='max-width: 100px'/>"
+
+repo:
+  url:
+    home: https://abj.org.br
+    source: https://abj.org.br
+    issue: https://abj.org.br
+    user: https://abj.org.br
+
+lang: pt
+
+authors:
+  Associação Brasileira de Jurimetria:
+    html: "<img src='https://abj.org.br/assets/logo-home.png' style='max-width: 100px'/> Associação Brasileira de Jurimetria"
+    href: https://abj.org.br
+  footer:
+    roles: [fnd]
+    text: ""
+  sidebar:
+    roles: [fnd]
+    before: "Associação Brasileira de Jurimetria"
+    after: "Associação Brasileira de Jurimetria"
+
+development:
+  mode: release
+
+home:
+  title: 'Observatório da Insolvência: Rio Grande do Sul'
+  description: >
+    O Observatório da Insolvência do Rio Grande do Sul analisa todos os
+    processos de recuperação judicial distribuídos no Rio Grande do Sul a
+    partir do ano de 2010.
+  strip_header: true
+  sidebar:
+    structure: [authors]
+    components:
+      authors:
+        title: "<a href='https://obs.abj.org.br' target='_blank'>Observatórios da ABJ</a>"
+        text: "<a href='https://obs.abj.org.br' target='_blank'><img src='https://obs.abj.org.br/images/main.png' style='max-width:200px;margin-left:auto;margin-right:auto;display:block;'/></a>"
+
+search:
+  show: false
+
+navbar:
+  bg: primary
+  structure:
+    left:  [home,relatorio,app,articles]
+    right: [twitter,linkedin]
+  components:
+    relatorio:
+      text: Relatório
+      href: relatorio/index.html
+    app:
+      text: Aplicativo
+      href: https://abjur.shinyapps.io/obsRJRS
+    articles:
+      text: Patrocinadores
+      href: articles/patrocinadores.html
+    twitter:
+      icon: "fab fa-twitter fa-lg"
+      href: https://twitter.com/abjurimetria
+      aria-label: Twitter
+    linkedin:
+      icon: "fab fa-linkedin fa-lg"
+      href: https://www.linkedin.com/company/jurimetria/
+      aria-label: LinkedIn
