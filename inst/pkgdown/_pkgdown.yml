@@ -1,10 +1,5 @@
 destination: docs
 
-# template:
-#   params:
-#     bootswatch: flatly
-#     ganalytics: UA-182605574-1
-
 template:
   bootstrap: 5
   # bootswatch: flatly
@@ -12,9 +7,10 @@ template:
     bg: "#FAFFFA"
     fg: "#000000"
     primary: "#20356b"
-    base_font: {google: "Roboto"}
-    heading_font: {google: "Roboto Slab"}
+    base_font: {google: "Lato"}
+    heading_font: {google: "Lato"}
     code_font: {google: "JetBrains Mono"}
+    navbar-brand-font-size: "1.8rem"
   trailing_slash_redirect: true
   params:
     noindex: false
@@ -68,11 +64,17 @@ home:
     partir do ano de 2010.
   strip_header: true
   sidebar:
-    structure: [authors]
+    structure: [img,outros,apoie]
     components:
-      authors:
-        title: "<a href='https://obs.abj.org.br' target='_blank'>Observatórios da ABJ</a>"
+      img:
+        title: "<br/><br/>"
         text: "<a href='https://obs.abj.org.br' target='_blank'><img src='https://obs.abj.org.br/images/main.png' style='max-width:200px;margin-left:auto;margin-right:auto;display:block;'/></a>"
+      outros:
+        title: "OUTROS PROJETOS"
+        text: "<ul><li><a href='https://obs.abj.org.br'>Observatórios da ABJ</a></li><li><a href='https://www.youtube.com/playlist?list=PLD0UYa_Y_JKG9FQWJqOqGdjBEt6FvkfOA'>Divulgações de resultados</a></li></ul>"
+      apoie:
+        title: "APOIE"
+        text: "<ul><li><a href='https://obs.abj.org.br/apoie/' target='_blank'>Patrocine um projeto</a></li></ul>"
 
 search:
   show: false
